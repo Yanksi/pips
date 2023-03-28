@@ -29,7 +29,7 @@ def load(ckpt_dir, model, optimizer=None, scheduler=None, model_ema=None, step=0
         print('-- note this function no longer appends "saved_checkpoints/" before the ckpt_dir --')
     else:
         ckpt_names = os.listdir(ckpt_dir)
-        steps = [int((i.split('-')[1]).split('.')[0]) for i in ckpt_names]
+        steps = [int((i.split('-')[1]).split('.')[0]) for i in ckpt_names if i.endswith('pth')]
         if len(ckpt_names) > 0:
             if step==0:
                 step = max(steps)
