@@ -1,0 +1,3 @@
+[submodule "reference_model"]
+	path = reference_model
+	url = https://huggingface.co/aharley/pips
